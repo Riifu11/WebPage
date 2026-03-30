@@ -3,35 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Shie Portfolio</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#home" class="logo">Shie<span>Santiago</span></a>
-    
-        <i class="bi bi-list" id="menu-icon"></i>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand logo" href="#">Shie<span>Santiago</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+        <i class="bi bi-list toggler-icon fs-1"></i>
+        </button>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#profile">Profile</a>
-            <a href="#skills">Tech Stack</a>
-            <a href="#projects">Projects</a>
-            <a href="#webinars">Webinars</a>
-            <a href="#organizations">Organization</a>
-            <a href="#certificates">Certifications</a>
-            <a href="#contact">Hire Me</a>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#skills">Tech Stack</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#webinars">Webinars</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#organizations">Organizations</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#certificates">Certificates</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#contact">Hire Me</a>
+            </li>
+        </ul>
+        </div>
         </nav>
     </header>
-
-    <section class="home" id="home">
-        <h2 class="heading">Shiela Jane Santiago</h2>
+    <section class="home text-center" id="home">
+        <h1 class="display-1 fw-bold">Shiela Jane Santiago</h1>
 
         <div class="home-content">
             <h3 class="text-animation"><span></span></h3>
-            <p>"Believe in yourself, it's never too late to start over."</p>
+            <p class="fs-4 fw-medium">"Believe in yourself, it's never too late to start over."</p>
 
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/shiesntg/" target="_blank">
@@ -44,32 +72,39 @@
                     <i class="bi bi-envelope-at"></i>
                 </a>
             </div>
-            <a href="#contact" class="btn">HIRE ME</a>
+            <a href="#contact" class="btn badge rounded-pill">HIRE ME</a>
         </div>
     </section>
 
     <section class="profile" id="profile">
-        <div class="profile-img">
-            <img src="Shie.jpg" alt="">
-        </div>
-
-        <div class="profile-content">
-            <h3><i class="bi bi-person"></i>About me</h3>
-            <h2>Hi</h2>
-            <h1>It's <span>Shiela</span></h1>
-            
-            <p>Graduated in BSBA major in Marketing Management at 
-            Bulacan State University. Worked at Burger King as a 
-            Shift Manager for more than two (2) years. Currently a 
-            BSIT Student at STI College Malolos. I am continuously 
-            exploring various programming skills and techniques to 
-            support my growth in the field of 
-            Game Development</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-img text-center">
+                        <img src="Shie.jpg" alt="" class="rounded-circle" />
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="profile-content">
+                        <h3 class="display-5 fw-bold"><i class="bi bi-person"></i>About me</h3>
+                        <h2 class="fs-1 fw-bold">Hi</h2>
+                        <h4 class="display-2 fw-bold">It's <span>Shiela</span></h4>
+                        
+                        <p class="fs-5">Graduated in BSBA major in Marketing Management at 
+                        Bulacan State University. Worked at Burger King as a 
+                        Shift Manager for more than two (2) years. Currently a 
+                        BSIT Student at STI College Malolos. I am continuously 
+                        exploring various programming skills and techniques to 
+                        support my growth in the field of 
+                        Game Development</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="skills" id="skills">
-        <h2 class="heading">Tech Stack</h2>
+        <h2 class="heading display-1 fw-bold text-center">Tech Stack</h2>
 
         <div class="container">
             <div class="p-4 glow-box">
@@ -103,59 +138,45 @@
         </div>
     </section>
 
-<!--
-    <section class="skills" id="skills">
-        <h2 class="heading">Tech Stack</h2>
-
-        <div class="skills-container">
-            <div class="skills-box">
-                <a class="btn"><i class="bi bi-filetype-java"></i> Java</a>
-                <a class="btn"><i class="bi bi-filetype-cs"></i> C#</a>
-                <a class="btn"><i class="bi bi-filetype-py"></i> Python</a>
-                <a class="btn"><i class="bi bi-filetype-html"></i> HTML</a>
-                <a class="btn"><i class="bi bi-filetype-css"></i> CSS</a>
-                <a class="btn"><i class="bi bi-filetype-js"></i> Javascript</a>
-                <a class="btn"><i class="bi bi-bootstrap"></i> Bootstrap</a>
-                <a class="btn"><i class="bi bi-filetype-sql"></i> MS SQL Server</a>
-            </div>
-        </div>
-    </section>
--->
-
-    <section class = "projects" id="projects">
-        <h2 class="heading">Projects</h2>
-
-        <div class="project-container">
-            
-            <div class="project-box">
-                <img src="movieSelectionSS.png" alt="CineMax">
-                <div class="project-info">
-                    <h4>CineMax</h4>
-                    <p>A movie ticket booking application developed using Java. 
-                        The application allows users to browse available movies, 
-                        select showtimes, and book tickets online.</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/Riifu11/CineMax" target="_blank" class="btn"><i class="bi bi-code"></i> Code</a>
-                        <a href="movieSelection.png" target="_blank" class="btn"><i class="bi bi-image"></i> Screenshot</a>
-                        <a class="btn"><i class="bi bi-filetype-java"></i> Java</a>
-                        <a class="btn"><i class="bi bi-box"></i> Netbeans</a>
-                    </div>
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="heading display-1 fw-bold text-center">Projects</h2>
                 </div>
-            </div>
-
-            <div class="project-box">
-                <img src="babybondSS.png" alt="BabyBond">
-                <div class="project-info">
-                    <h4>BabyBond</h4>
-                    <p>A POS application designed for a specific clinic to track 
-                        their inventory. It includes features of inventory management, 
-                        sales tracking, and reporting.</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/Riifu11/Babybondposinventory" target="_blank" class="btn"><i class="bi bi-code"></i> Code</a>
-                        <a href="babybond1.png" target="_blank" class="btn"><i class="bi bi-image"></i> Screenshot</a>
-                        <a class="btn"><i class="bi bi-filetype-cs"></i> C#</a>
-                        <a class="btn"><i class="bi bi-filetype-sql"></i> MS SQL Server</a>
-                        <a class="btn"><i class="bi bi-layers"></i>Visual Studio</a>
+                <div class="col-lg-12 text-center">
+                    <div class="row">
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-bg" style="background-image: url('movieSelectionSS.png');"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title fs-4 fw-bold">CineMax</h5>
+                                    <p class="card-text">A movie ticket booking application developed using Java. 
+                                        The application allows users to browse available movies, 
+                                        select showtimes, and book tickets online.</p>
+                                    <a href="https://github.com/Riifu11/CineMax" target="_blank" class="btn badge rounded-pill"><i class="bi bi-code"></i> Code</a>
+                                    <a href="movieSelection.png" target="_blank" class="btn badge rounded-pill"><i class="bi bi-image"></i> Screenshot</a>
+                                    <a href="#" class="btn badge rounded-pill no-redirect"><i class="bi bi-filetype-java"></i> Java</a>
+                                    <a href="#" class="btn badge rounded-pill no-redirect"><i class="bi bi-box"></i> Netbeans</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-bg" style="background-image: url('babybondSS.png');"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title fs-4 fw-bold">BabyBond</h5>
+                                    <p class="card-text">A POS application designed for a specific clinic to track 
+                                        their inventory. It includes features of inventory management, 
+                                        sales tracking, and reporting.</p>
+                                    <a href="https://github.com/Riifu11/Babybondposinventory" target="_blank" class="btn badge rounded-pill"><i class="bi bi-code"></i> Code</a>
+                                    <a href="babybond1.png" target="_blank" class="btn badge rounded-pill"><i class="bi bi-image"></i> Screenshot</a>
+                                    <a href="#" class="btn badge rounded-pill no-redirect"><i class="bi bi-filetype-cs"></i> C#</a>
+                                    <a href="#" class="btn badge rounded-pill no-redirect"><i class="bi bi-filetype-sql"></i> MS SQL Server</a>
+                                    <a href="#" class="btn badge rounded-pill no-redirect"><i class="bi bi-box"></i> Visual Studio</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,128 +184,196 @@
     </section>
 
     <section class="webinars" id="webinars">
-        <h2 class ="heading">Webinars</h2>
-
-        <div class="webinars-container">
-            <div class="webinars-box">
-                <img src="syntax webinar.jpg" alt="syntax">
-                <h3>SYNTAX Endgame</h3>
-                <p>The Second IT Congress: Gaming Towards Excellence.
-                <br>
-                <br>
-                An IT congress organized by the SYNTAX organization 
-                of STI College Malolos, featuring a series of events 
-                focused on various topics such as the gaming industry 
-                in IT and leadership.</p>
-                <a class="btn">April 2024</a>
-            </div>
-            <div class="webinars-box">
-                <img src="syntax cert.jpg" alt="blaze">
-                <h3>Bridging Knowledge</h3>
-                <p>Exploring Digital Divide, Cybersecurity and OS 
-                Trends, Professionalism in the IT Industry, and 
-                Programming.
-                <br>
-                <br>
-                The seminar provided valuable insights into important 
-                topics in Information Technology, helping participants 
-                expand their knowledge of current industry trends 
-                and professional practices.</p>
-                <a class="btn">December 2024</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="heading display-1 fw-bold text-center">Webinars</h2>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <div class="row">
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="webinars-logo" style="background-image: url('syntax webinar.jpg');"></div>
+                                    <h5 class="card-title">SYNTAX Endgame</h5>
+                                    <p class="card-text">The Second IT Congress: Gaming Towards Excellence.
+                                    <br>
+                                    <br>
+                                    An IT congress organized by the SYNTAX organization 
+                                    of STI College Malolos, featuring a series of events 
+                                    focused on various topics such as the gaming industry 
+                                    in IT and leadership.</p>
+                                    <a href="#" class="btn badge rounded-pill no-redirect">April 2024</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="webinars-logo" style="background-image: url('syntax cert.jpg');"></div>
+                                    <h5 class="card-title">Bridging Knowledge</h5>
+                                    <p class="card-text">Exploring Digital Divide, Cybersecurity and OS 
+                                        Trends, Professionalism in the IT Industry, and 
+                                        Programming.
+                                        <br>
+                                        <br>
+                                        The seminar provided valuable insights into important 
+                                        topics in Information Technology, helping participants 
+                                        expand their knowledge of current industry trends 
+                                        and professional practices.</p>
+                                    <a href="#" class="btn badge rounded-pill no-redirect">December 2024</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="organizations" id="organizations">
-        <h2 class ="heading">Organizations</h2>
-
-        <div class="organizations-container">
-            <div class="organizations-box">
-                <img src="syntax-icon.jpg" alt="syntax">
-                <h3>SYNTAX Org</h3>
-                <h4>Member (2023-2024)</h4>
-                <p>Organization for the IT department of STI College 
-                    Malolos that promotes learning, collaboration, 
-                    and growth among IT students through various 
-                    events.</p>
-            </div>
-            <div class="organizations-box">
-                <img src="blaze-icon.jpg" alt="blaze">
-                <h3>BLAZE Org</h3>
-                <h4>Member (2026)</h4>
-                <p>No description as of now</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="heading display-1 fw-bold text-center">Organizations</h2>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <div class="row">
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="organizations-logo" style="background-image: url('syntax-icon.jpg');"></div>
+                                    <h5 class="card-title fs-4 fw-bold">SYNTAX Org</h5>
+                                    <h2 class="fs-6 fw-bold">Member (2023-2024)</h2>
+                                    <p class="card-text">Organization for the IT department of STI College 
+                                        Malolos that promotes learning, collaboration, 
+                                        and growth among IT students through various 
+                                        events.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="organizations-logo" style="background-image: url('blaze-icon.jpg');"></div>
+                                    <h5 class="card-title fs-4 fw-bold">BLAZE Org</h5>
+                                    <h2 class="fs-6 fw-bold">Member (2026)</h2>
+                                    <p class="card-text">No description as of now</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="certificates" id="certificates">
-        <h2 class ="heading">Certifications</h2>
-
-        <div class="certificate-container">
-            <div class="certificate-box">
-                <img src="Java.jpg" alt="java">
-                <h3>Java Fundamentals</h3>
-                <p>Awarded upon completion of a core academic 
-                    subject focused on the foundational principles 
-                    of programming. The course introduced essential 
-                    programming concepts using the Java programming 
-                    language and provided hands-on development 
-                    experience through the NetBeans IDE.</p>
-                    <a href="Java.jpg" target="_blank" class="btn">View Certificate</a>
-            </div>
-            <div class="certificate-box">
-                <img src="SAP.jpg" alt="sap">
-                <h3>SAP Modules</h3>
-                <p>Completed a hands-on academic course focused 
-                    on navigating and executing business processes 
-                    within the SAP S/4HANA environment. The program 
-                    covered multiple ERP modules using the Global 
-                    Bike business simulation model.</p>
-                <a href="SAP.jpg" target="_blank" class="btn">View Certificate</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="heading display-1 fw-bold text-center">Certificates</h2>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <div class="row">
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="certificates-logo" style="background-image: url('Java.jpg');"></div>
+                                    <h5 class="card-title fs-4 fw-bold">Java Fundamentals</h5>
+                                    <p class="card-text">Awarded upon completion of a core academic 
+                                        subject focused on the foundational principles 
+                                        of programming. The course introduced essential 
+                                        programming concepts using the Java programming 
+                                        language and provided hands-on development 
+                                        experience through the NetBeans IDE.</p>
+                                    <a href="Java.jpg" target="_blank" class="btn badge rounded-pill">View Certificate</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-same-height">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="certificates-logo" style="background-image: url('SAP.jpg');"></div>
+                                    <h5 class="card-title fs-4 fw-bold">SAP Modules</h5>
+                                    <p class="card-text">Completed a hands-on academic course focused 
+                                        on navigating and executing business processes 
+                                        within the SAP S/4HANA environment. The program 
+                                        covered multiple ERP modules using the Global 
+                                        Bike business simulation model.</p>
+                                    <a href="SAP.jpg" target="_blank" class="btn badge rounded-pill">View Certificate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Hire <span>Me</span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Subject">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="heading display-1 fw-bold text-center">Hire Me</h2>
+                </div>
+                <div class="col">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Full Name" id="fullname">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" id="form-email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject" id="subject">
+                        </div>
+                        <div class="mb-3">
+                        <textarea class="form-control" placeholder="Your Message" id="floatingTextarea"></textarea>
+                        </div>
+                        <a href="#" class="btn badge rounded-pill">Send Message</a>
+                    </form>
+                </div>
             </div>
-            
-            <textarea name="" id="" cols="30" rows="10"
-                placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message"
-                class="btn">
-        </form>
-    </section>
-
-    <footer class="footer">
-        <div class="social">
-            <a href="https://www.linkedin.com/in/shiesntg/" target="_blank">
-                <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="https://www.facebook.com/shiesntg" target="_blank">
-                <i class="bi bi-facebook"></i>
-            </a>
-            <a href="mailto:santiago.shielajane@gmail.com" target="_blank">
-                <i class="bi bi-envelope-at"></i>
-            </a>
         </div>
-        <p class="copyright">© 2026 Shiela Jane Santiago.
-            Bringing Ideas to Life</p>
-        <ul class="list">
-            <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap: Layout and Icons</a></li>
-            <li><a href="https://www.youtube.com/@HowtoWebDev" target="_blank">@HowToWebDev: Tutorial</a></li>
-        </ul>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/shiesntg/" target="_blank">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/shiesntg" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="mailto:santiago.shielajane@gmail.com" target="_blank">
+                            <i class="bi bi-envelope-at"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <p class="copyright">© 2026 Shiela Jane Santiago.
+                        Bringing Ideas to Life</p>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://getbootstrap.com/"
+                            class="link-light custom-link-size" target="_blank">Bootstrap: Layout and Icons</a></li>
+                        <li class="list-inline-item"><a href="https://www.youtube.com/@HowtoWebDev"
+                            class="link-light custom-link-size" target="_blank">@HowToWebDev: Tutorial</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="script.js"></script>
+
     <video autoplay muted loop playsinline id="bg-video">
-    <source src="Background.mp4" type="video/mp4">
-</video>
+        <source src="Background.mp4" type="video/mp4">
+    </video>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
